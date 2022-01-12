@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nandu's Calender</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- font-awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="container__calender">
+      <div class="calender">
+        <div class="calender__bar">
+          <button class="prev soft-btn">
+            <i class="fas fa-angle-left prev"></i>
+          </button>
+          <div class="current__month">
+            <h2></h2>
+            <p></p>
+          </div>
+          <button class="next soft-btn">
+            <i class="fas fa-angle-right next"></i>
+          </button>
+        </div>
+
+        <div class="weekdays__name">
+          <div class="days__name">Sun</div>
+          <div class="days__name">Mon</div>
+          <div class="days__name">Tue</div>
+          <div class="days__name">Wed</div>
+          <div class="days__name">Thur</div>
+          <div class="days__name">Fri</div>
+          <div class="days__name">Sat</div>
+        </div>
+        <div class="calendar__days"></div>
+        <div id="details">
+          <div>
+            <ul id="details__events"></ul>
+          </div>
+          <div>
+            <div>
+              <input type="text"/>
+              <button>Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
