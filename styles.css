@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+.container__calender {
+  width: 100%;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: 0px 0px 10px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calender {
+  width: 45rem;
+  height: 52rem;
+}
+.calender__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 15px;
+  border-bottom: 20px;
+  height: 100px;
+  width: 100%;
+  background-color: #66ac918f;
+}
+.calender__bar .soft-btn {
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  background: #66ac918f;
+  text-decoration: none;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+}
+.current__month {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+}
+.weekdays__name {
+  padding-top: 12px;
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.weekdays__name .days__name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+.calendar__days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: 12.7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  transition: background-color 0.2s;
+}
+.calendar__days div:hover {
+  background-color: #999898;
+  border: 0.1rem solid #777;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .weekdays__name .days__name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendar__days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: 12.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    transition: background-color 0.2s;
+  }
+}
+@media screen and (max-width: 500px) {
+  .calendar__days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    transition: background-color 0.2s;
+  }
+  .weekdays__name .days__name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#details {
+  position: absolute;
+  padding: 30px 40px;
+  background: #777;
+  min-height: 30vh;
+  width: 50vw;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#details li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+#close__btn {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: red;
+  color: white;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
